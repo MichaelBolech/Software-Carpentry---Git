@@ -1,0 +1,35 @@
+git config --global user.name "mbolech"
+git config --global user.email "m.bolech@massey.ac.nz"
+git config --global colour.ui "auto"
+git config --global core.editor "nano -w"
+git config --list #lists settings
+git init: initialises Git (creates folder for repositories)
+git status
+git add [file]: starts tracking changes (staging)
+git commit [file]: make note of changes in files (starts Nano)
+git commit -m "message": add a short note about any file that was added to the staging step witout starting Nano
+git log: log of all changes (not actual changes) lists author, data and comment
+git diff: shows changes between final repository and untracked
+git diff --staged: shows changes between repository and staged
+git diff HEAD~1 mars.txt: difference between most recent snapshot (HEAD~1) and current working directory (i.e. tracked one)
+git diff HEAD~2 mars.txt: difference between 2nd recent snapshot (HEAD~2), including most recent one, and working directory
+git diff [unique ID]
+git checkout HEAD [file]: Most recently snapshot is restored.
+git checkout [commit ID] [file]: Snapshot with the unique ID is restored.
+.gitignored: Contains list of files or folders that are ignored by Git in the backup process
+git status --ignored: Shows ignored files and folders
+git remote add origin [url]: Adds online repository (named "origin") to local repo
+git remote -v: check url
+git push origin master: put the local version into the online version
+git clone [url]: get the online repo, e.g. to share it with someone or have a copy in a separate folder
+
+Files go from untracked --[git init]--> tracked --[git add]--> staged --[git commit -m "comment"]--> committed
+
+
+Nano
+nano mars.txt: creates/opens file
+ctrl-o: saves file
+
+
+
+"LF will be replaced by CRLF in git": Use "git config core.autocrlf true" to turn off warning (auto-converts CRLF line endings into LF)
